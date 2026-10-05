@@ -1,0 +1,63 @@
+/* Instituto Horizonte - estilos personalizados (complementam o Bootstrap) */
+:root {
+  --azul: #14213D;
+  --ambar: #FCA311;
+  --fundo: #F5F7FA;
+  --texto: #1d2433;
+  --bs-primary: #14213D;
+  --bs-primary-rgb: 20, 33, 61;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  padding-top: 56px; /* espaço da navbar fixa */
+}
+h1, h2, h3, h4, h5, .navbar-brand { font-family: "Sora", system-ui, sans-serif; }
+
+/* Botões com a identidade do portal */
+.btn-primary { --bs-btn-bg: var(--azul); --bs-btn-border-color: var(--azul);
+  --bs-btn-hover-bg: #0d1730; --bs-btn-hover-border-color: #0d1730; }
+.btn-outline-primary { --bs-btn-color: var(--azul); --bs-btn-border-color: var(--azul);
+  --bs-btn-hover-bg: var(--azul); --bs-btn-hover-border-color: var(--azul); }
+.btn-warning { --bs-btn-bg: var(--ambar); --bs-btn-border-color: var(--ambar); font-weight: 600; }
+
+/* Navbar e rodapé */
+.bg-horizonte { background-color: var(--azul); }
+.navbar .nav-link { padding-inline: 1rem; }
+.navbar .nav-link:hover, .navbar .nav-link:focus { color: var(--ambar); }
+
+/* Hero */
+.hero { background: var(--azul); padding: 5rem 0; }
+.hero h1 { font-weight: 700; letter-spacing: -0.02em; }
+
+/* Títulos de seção */
+.secao-titulo { font-weight: 700; margin-bottom: .75rem; }
+
+/* Indicadores */
+.indicador { display: flex; flex-direction: column; }
+.indicador-valor { font-family: "Sora", sans-serif; font-weight: 700; font-size: clamp(2rem, 5vw, 3rem); color: var(--azul); line-height: 1; }
+.indicador-rotulo { margin-top: .5rem; color: #5b6475; }
+
+/* Cards de curso */
+.curso-card { border: 1px solid #dde2ea; border-radius: .75rem; overflow: hidden; }
+.curso-card .card-img-top { aspect-ratio: 10 / 7; object-fit: cover; }
+
+/* Notícias */
+.noticia { border-left: 4px solid var(--ambar); padding: .25rem 0 .25rem 1rem; }
+
+/* Modal */
+.modal-body dt { font-family: "Sora", sans-serif; font-size: .9rem; margin-top: 1rem; }
+.modal-body dt:first-child { margin-top: 0; }
+.modal-body dd { margin-bottom: 0; }
+
+/* Foco visível */
+a:focus-visible, button:focus-visible, .form-control:focus, .form-select:focus {
+  outline: 3px solid var(--ambar); outline-offset: 2px; box-shadow: none;
+}
+
+@media (max-width: 575.98px) { .hero { padding: 3rem 0; } }
